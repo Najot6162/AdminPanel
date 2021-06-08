@@ -1,0 +1,46 @@
+<style>
+.all{
+    margin: 30px 0 0 600px;
+}
+.bcontent1 {
+            margin-top: 30px;
+        }
+</style>
+<div class="col-md ml-5 all">
+    <div class="row">
+        <h1 class="playlistt">Home Page</h1>
+    <div class="container mt-5 bcontent">
+     <% for( const item of home) {%> 
+        <div class="col-md-6">
+
+       
+     <div class="card mt-3  allPlaylist" style="width: 600px;">
+         <div class="row no-gutters">
+             <div class="col-sm-3">
+                <img class="card-img" src="/uploads/home/<%= item.file %> " alt="Suresh Dasari Card">
+             </div>
+             <div class="col-sm-5">
+                 <div class="card-body">
+                      <p class="card-textHome"><%= item.text%></p>
+                 </div>
+             </div>
+             <% if (user.role === 'menejer') { %>
+             <div class="col-sm-2 updateHome">
+                <form method="POST" action="<%=`/home/${item._id}?_method=DELETE`%>">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                   
+                   </form>
+               
+              
+             </div>
+
+             <%} else { %>
+                    
+                <% } %>
+         </div>
+     </div>
+    </div>
+     <% } %> 
+ </div>
+</div>
+</div>

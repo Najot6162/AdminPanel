@@ -1,0 +1,42 @@
+<div id="wrapper">
+     
+    <!-- /. NAV SIDE  -->
+    <div id="page-wrapper" >
+        <div id="page-inner">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="wrapper fadeInDown">
+                        <div id="formContent">
+                          <!-- Tabs Titles -->
+                      
+                          <!-- Icon -->
+                          <div class="fadeIn first mt-2">
+                            <h4 class="text">O'zgartirish</h4>
+                          </div>
+                      
+                          <!-- Login Form -->
+                          <form method="post" action="<%=`/playlist/${playList._id}?_method=PUT`%>" enctype="multipart/form-data" >
+                          
+                            <input type="text" id="login" class="fadeIn second mt-2" name="name" value="<%= playList.name  %> "  placeholder="musiqa nomini kiriting">
+                            <input type="text" id="password" class="fadeIn third mt-3" name="author" value="<%= playList.author  %> " placeholder="author">
+                            <input type="text" id="password" class="fadeIn third mt-3" name="text" value="<%= playList.text  %> " placeholder="Musiqa matni ">
+                            <input type="file" id="login" class="fadeIn second mt-2 ml-5" name="image" value="<%= playList.image %>" placeholder="Musiqa kiriting">
+                            <input type="file" id="login" class="fadeIn second mt-2 ml-5" name="music" value="<%= playList.music %>" placeholder="Rasm kiriting">
+                            
+                            <input type="submit" class="fadeIn fourth mt-3" value=" yuklash ">
+                          </form>
+                      
+                          <!-- Remind Passowrd -->
+                          <!-- <div id="formFooter">
+                              Don't have an account?
+                            <a class="underlineHover" href="/login">Login</a>
+                          </div> -->
+                      
+                        </div>
+                      </div>
+         
+            <div class="row"> 
+                
+                  
+
+    </div>
